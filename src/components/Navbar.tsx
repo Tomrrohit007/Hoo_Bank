@@ -10,7 +10,7 @@ const navbarVariants = {
     y: 0,
   },
   animate: {
-    y: -78,
+    y: -98,
   },
 };
 
@@ -35,7 +35,34 @@ const Navbar: FC = () => {
   };
 
   useMotionValueEvent(scrollY, "change", () => update());
-  console.log(toggle);
+
+  toggle?
+    document.body.style.overflow = 'hidden':
+    document.body.style.overflow = ''
+
+  const mobileNav = () => {
+    return (
+    <div
+      className={`mobile-ham`}
+      aria-expanded={toggle.toString()}
+      >
+        <ul className="nav-item-list list-none w-screen h-screen flex justify-center gap-8 flex-col items-center ">
+          {navLinks.map((nav, index) => (
+            <li
+              className={`font-poppins select-none font-semibold cursor-pointer hover:text-[#bee5f1] text-[1rem] text-white ${
+                navLinks.length - 1 === index ? "mr-0" : "mb-10"
+              }`}
+              key={nav.id}
+            >
+              <button onClick={changeToggle}>
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
   return (
     <m.div
       variants={navbarVariants}
@@ -101,7 +128,7 @@ const Navbar: FC = () => {
               transition={{
                 delay: 0.4,
               }}
-              className="button-two menu-button mr-5"
+              className="button-two menu-button mr-5 z-20"
               aria-controls="primary-navigation"
               aria-expanded={toggle.toString()}
               onClick={() => setToggle((prev: any) => !prev)}
@@ -135,26 +162,7 @@ const Navbar: FC = () => {
                 ></line>
               </svg>
             </m.button>
-            <div
-              className={`${
-                toggle ? "flex" : "hidden"
-              } p-6 bg-black-gradient absolute top-[73px] right-0 mx-4 mr-[24px] my-2 min-w-[200px] rounded-lg sidebar`}
-            >
-              <ul className="list-none flex flex-col justify-end items-center flex-1">
-                {navLinks.map((nav, index) => (
-                  <li
-                    className={`font-poppins select-none font-normal cursor-pointer hover:text-[#bee5f1] text-[1rem] text-white ${
-                      navLinks.length - 1 === index ? "mr-0" : "mb-10"
-                    }`}
-                    key={nav.id}
-                  >
-                    <button onClick={changeToggle}>
-                      <a href={`#${nav.id}`}>{nav.title}</a>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {mobileNav()}
           </div>
         </nav>
       </div>
