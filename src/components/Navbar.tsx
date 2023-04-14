@@ -36,15 +36,20 @@ const Navbar: FC = () => {
 
   useMotionValueEvent(scrollY, "change", () => update());
 
-  toggle?
-    document.body.style.overflow = 'hidden':
-    document.body.style.overflow = ''
+  toggle
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "");
 
   const mobileNav = () => {
     return (
-    <div
-      className={`mobile-ham`}
-      aria-expanded={toggle.toString()}
+      <m.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: 0.6,
+        }}
+        className={`mobile-ham`}
+        aria-expanded={toggle.toString()}
       >
         <ul className="nav-item-list list-none w-screen h-screen flex justify-center gap-8 flex-col items-center ">
           {navLinks.map((nav, index) => (
@@ -60,7 +65,7 @@ const Navbar: FC = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </m.div>
     );
   };
   return (
@@ -126,7 +131,7 @@ const Navbar: FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
-                delay: 0.4,
+                delay: 0.6,
               }}
               className="button-two menu-button mr-5 z-20"
               aria-controls="primary-navigation"
