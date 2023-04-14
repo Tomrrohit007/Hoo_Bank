@@ -9,6 +9,7 @@ interface Props {
   img: any;
   i: number;
 }
+
 const FeedbackCard = (props: Props) => {
   const { name, content, title, img, i } = props;
   return (
