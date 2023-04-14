@@ -23,7 +23,6 @@ import twitter from "./twitter.svg";
 import people01 from "./people01.webp";
 import people02 from "./people02.webp";
 import people03 from "./people03.webp";
-import menu1 from "./menu1.webp"
 
 export {
   airbnb,
@@ -41,7 +40,6 @@ export {
   menu,
   close,
   google,
-  menu1,
   apple,
   arrowUp,
   discount,
