@@ -17,8 +17,8 @@ const App: FC = () => {
   return (
     <div className="bg-primary w-full">
           <Navbar />
-      <div className={`${styles.flexStart} bg-primary pt-14`}>
-        <div className={`${styles.boxWidth}`}>
+      <div className={`${styles.flexStart} bg-primary  pt-14`}>
+        <div className={`${styles.boxWidth} mt-16`}>
           <Hero />
         </div>
       </div>
