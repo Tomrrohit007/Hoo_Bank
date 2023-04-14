@@ -16,6 +16,7 @@ const Hero: FC = () => (
           <span className="text-white">20%</span> Discount for{" "}
           <span className="text-white">1 Month</span> Account
         </p>
+        
       </m.div>
       <div className="flex flex-row justify-between items-center w-full">
         <m.h1 variants={viewOnScrollVarients(4)} initial="initial" animate="animate"  className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px]">
