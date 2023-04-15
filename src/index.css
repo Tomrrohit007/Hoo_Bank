@@ -33,6 +33,7 @@
   --button-color: #4dd5ff;
   background: transparent;
   cursor: pointer;
+  user-select: none;
   opacity: 0;
 }
 
@@ -215,15 +216,15 @@
 
 .mobile-ham{
   position: absolute;
+  inset: 0 0 -90vh 0;
+  overflow: hidden;
   background: linear-gradient(
     144.39deg,
-    #ffffff -278.56%,
-    #6d6d6d -78.47%,
-    #11101d 91.61%
+    rgba(1, 12, 36, 0.96),
   );
-  inset:0 0 -90vh 0;
-  overflow: hidden;
+  backdrop-filter: blur(20px);
 }
+
 .mobile-ham[aria-expanded="true"]{
   animation: slide-in 0.6s ease-in-out forwards;
 }

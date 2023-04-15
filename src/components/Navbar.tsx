@@ -78,7 +78,7 @@ const Navbar: FC = () => {
         <nav className="navbar w-full select-none flex py-6 justify-between items-center">
           <Link to="/" onClick={scrollToTop}>
             <svg
-              className=" select-none w-[124px] h-[32px] cursor-pointer"
+              className=" select-none w-[124px] h-[32px] relative cursor-pointer z-10"
               width="266"
               height="73"
               viewBox="0 0 266 73"
