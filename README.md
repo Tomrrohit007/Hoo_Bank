@@ -7,7 +7,7 @@
 <h4>Hoo Bank is a next generation payment system. our primary goal is to provide our customers with the highest level of financial services possible. We understand that each individual and business has unique needs, and we strive to tailor our services to meet those needs. Whether it is providing personal checking accounts, business loans, or wealth management services, our team of experienced professionals is dedicated to ensuring that our customers receive the personalized attention and guidance they need to achieve their financial goals.
 
 
-You can check out the live website <a href="https://rohit-hoo-bank.netlify.app/">here</a>
+You can check out the live website <a href="https://rohit-hoo-bank.netlify.app/" target="_blank">here</a>
 </h4>
 ### Set Up Instructions
 
